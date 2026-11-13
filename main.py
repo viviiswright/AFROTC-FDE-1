@@ -22,7 +22,7 @@ set_site_information(
     description="AFROTC FDE game to train cadets.",
     sources="DAFPAM 34-1203.",
     planning=["Message_to_the_TA.pdf", "Final_Project_1_Design.pdf", "Final_Project_0_Pick_a_Problem.pdf"],
-    links=["https://github.com/your-username/your-repository"],
+    links=["https://github.com/viviiswright/your-repository"],
 )
 set_website_framed(False)
 
@@ -72,7 +72,7 @@ class State:
     must_march_next: bool = False
     status_feedback: str = "Feedback pending..."
     show_checklist: bool = True
-    movements: list[DrillMovement] = field(default=create_initial_movements)
+    movements: list[DrillMovement] = field(default_factory=create_initial_movements)
     evaluation_complete: bool = False
 
 @route
